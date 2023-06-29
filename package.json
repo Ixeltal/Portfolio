@@ -1,0 +1,14 @@
+{
+  "name": "site-web-passionne",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile_sass_css":"sass --no-source-map --watch ./scss/index.scss ./css/style.css"
+  },
+  "author": "Ixeltal",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}
