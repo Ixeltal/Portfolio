@@ -225,6 +225,11 @@ body.light-theme header .chargement .cv-container a {
   width: 20px;
   height: 20px;
 }
+.presentation .left-presentation .container-button .social-media:hover {
+  background: #754ef9;
+  border: 2px solid #754ef9;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0, 1.005);
+}
 .presentation .right-presentation {
   display: flex;
   flex-direction: column;
@@ -320,6 +325,7 @@ body.light-theme header .chargement .cv-container a {
   display: flex;
   flex-direction: row;
   gap: 3rem;
+  justify-content: space-around;
 }
 .projets .container-projets a {
   width: 30%;
@@ -360,6 +366,17 @@ body.light-theme header .chargement .cv-container a {
   border-radius: 5px;
   color: #ffffff;
 }
+.projets .container-button-other-projet {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.projets .container-button-other-projet a {
+  color: #ffffff !important;
+  border: 1px solid white;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
 
 body.light-theme {
   background: white;
@@ -377,9 +394,20 @@ body.light-theme .presentation .left-presentation .container-button .button-link
   background: black;
   color: white;
 }
+body.light-theme .presentation .left-presentation .container-button .button-link:hover {
+  background: #754ef9;
+  color: white;
+}
 body.light-theme .presentation .left-presentation .container-button .social-media {
   color: black;
   border: 2px solid black;
+}
+body.light-theme .presentation .left-presentation .container-button .social-media:hover {
+  background: #754ef9;
+  border: 2px solid #754ef9;
+}
+body.light-theme .presentation .left-presentation .container-button .social-media:hover i {
+  color: white;
 }
 body.light-theme .experience h2 {
   color: black;
@@ -400,22 +428,22 @@ body.light-theme .langages-applications .container-lang-app .container-app .cont
 body.light-theme .langages-applications .container-lang-app .container-app .container-inter-langapp .single-lang-app P {
   color: black;
 }
-body.light-theme .langages-applications .projets h2 {
+body.light-theme .projets h2 {
   color: black;
 }
-body.light-theme .langages-applications .projets .container-projets a {
-  border: 2px solid black;
+body.light-theme .projets .container-projets a {
+  border: 2px solid black !important;
 }
-body.light-theme .langages-applications .projets .container-projets a .container-image {
+body.light-theme .projets .container-projets a .container-image {
   border-bottom: 2px solid black;
 }
-body.light-theme .langages-applications .projets .container-projets a .text-project h3 {
+body.light-theme .projets .container-projets a .text-project h3 {
   color: black;
 }
-body.light-theme .langages-applications .projets .container-projets a .text-project p {
+body.light-theme .projets .container-projets a .text-project p {
   color: black;
 }
-body.light-theme .langages-applications .projets .container-projets a .container-langapp-use p {
+body.light-theme .projets .container-projets a .container-langapp-use p {
   border: black 1px solid;
   color: black;
 }
@@ -446,20 +474,41 @@ footer {
   top: 100vh;
   margin: 170px auto 0;
 }
+footer hr {
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 100px;
+}
 footer .container-section {
   display: flex;
   justify-content: space-between;
   width: 100%;
   gap: 24px;
   margin: auto;
+  padding: 2rem;
 }
 footer .container-section .cv {
   color: white;
   max-width: 35%;
 }
+footer .container-section .cv h2 {
+  padding: 0 0 1rem 0;
+}
+footer .container-section .cv p {
+  padding: 0 0 1rem 0;
+}
+footer .container-section .cv a {
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  border-radius: 5px;
+}
 footer .container-section .page {
   display: flex;
   flex-direction: column;
+}
+footer .container-section .page h2 {
+  padding: 0 0 1rem 0;
 }
 footer .container-section .page a {
   color: white;
@@ -499,5 +548,94 @@ footer .container-section .reseaux a .container-linkedin img {
   height: 30px;
 }
 footer .container-section .reseaux a .container-linkedin p {
+  color: white;
+}
+
+body.light-theme footer {
+  display: flex;
+  max-width: 1600px;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: sticky;
+  top: 100vh;
+  margin: 170px auto 0;
+}
+body.light-theme footer hr {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 100px;
+}
+body.light-theme footer .container-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
+  margin: auto;
+  padding: 2rem;
+}
+body.light-theme footer .container-section .cv {
+  color: black;
+  max-width: 35%;
+}
+body.light-theme footer .container-section .cv h2 {
+  padding: 0 0 1rem 0;
+}
+body.light-theme footer .container-section .cv p {
+  padding: 0 0 1rem 0;
+}
+body.light-theme footer .container-section .cv a {
+  color: black;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body.light-theme footer .container-section .page {
+  display: flex;
+  flex-direction: column;
+}
+body.light-theme footer .container-section .page h2 {
+  padding: 0 0 1rem 0;
+  color: black;
+}
+body.light-theme footer .container-section .page a {
+  color: black;
+}
+body.light-theme footer .container-section .reseaux {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body.light-theme footer .container-section .reseaux a .container-github {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  background: gray;
+  border: 2px solid white;
+  padding: 5px 15px;
+}
+body.light-theme footer .container-section .reseaux a .container-github img {
+  width: 30px;
+  height: 30px;
+}
+body.light-theme footer .container-section .reseaux a .container-github p {
+  color: white;
+}
+body.light-theme footer .container-section .reseaux a .container-linkedin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  background: gray;
+  border: 2px solid white;
+  padding: 5px 15px;
+}
+body.light-theme footer .container-section .reseaux a .container-linkedin img {
+  width: 30px;
+  height: 30px;
+}
+body.light-theme footer .container-section .reseaux a .container-linkedin p {
   color: white;
 }
