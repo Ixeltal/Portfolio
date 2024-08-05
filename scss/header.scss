@@ -1,46 +1,158 @@
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 7%;
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+@keyframes colorchange {
+    0% { color: white; }
+
+    100% { color: $main-color; }
+}
+
+
+header{
     display: flex;
     align-items: center;
-    z-index: 100;
-    background-color: rgb(79, 77, 77);
-    .logo{
-       font-size: 25px;
-       color: white;
-       text-decoration: none;
-       font-weight: 600;
-       cursor: default;
-       margin-right: auto;
+    width: 100%;
+    margin: auto;
+    padding: 12px 7rem;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0, 1.005);
+    &.background-transparent{
+        background-color: rgba(255, 255, 255, 0.302) ;
+        transition: all 0.3s cubic-bezier(0.39, 0.575, 0, 1.005);
+        backdrop-filter: blur(5px);
+        border-bottom: 2px solid white;
     }
-        .navbar{
+    .logo{
+        scroll-behavior: smooth;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.39,0.575,0,1.005);
+        font-weight: 400;
+        color: $ecriture;
+
+        &:hover{
+            animation: shake 0.5s;
+
+
+        }
         a{
-            position: relative;
-            color: $primary-color;
-            text-decoration: none;
-            font-weight: 500;
-            margin-right: 35px;
-            &.active::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -6px;
-                width: 100%;
-                height: 2px;
-                background: $primary-color;
-            }
+            font-size: 35px;
+            color: $ecriture;
+            font-weight: 900;
+
         }
     }
-    .toggle{
+    nav{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
-        margin-top: 1px;
-        cursor: pointer;
+        align-items: center;
+        gap: 40px;
+        a{
+            color: $ecriture;
+            font-size: 17px;
+            font-weight: 500;
+            &:hover{
+                animation: colorchange 0.2s linear forwards;
+            }
+
+        }
     }
-    .toggle .toggle-icon {
-        font-size: 24px;
-        color: $primary-color;
+    .chargement{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .change-theme{
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            i{
+                transition: opacity 0.5s ease;
+            }
+        }
+        .cv-container{
+            border: 2px solid $blanc;
+            border-radius: 4px;
+            padding: 5px 15px;
+            &:hover{
+                animation: shake 0.5s;
+            }
+            a{
+                color: $ecriture;
+            }
+            
+        }
+    }
+}
+
+.hide {
+    opacity: 0;
+}
+  
+.show {
+    opacity: 1;
+}
+
+body{
+    &.light-theme{
+        header{           
+            &.background-transparent{
+                background-color: rgba(0, 0, 0, 0.302) ;
+                border-bottom: 2px solid black;
+            }
+            .logo{  
+                &:hover{
+                    animation: shake 0.5s;
+                }
+                a{
+                    color: black;
+                }
+            }
+            nav{
+                a{
+                    color: black;
+                    &:hover{
+                        animation: colorchange 0.2s linear forwards;
+                    }
+                }
+            }
+            .chargement{
+                .change-theme{
+                    cursor: pointer;
+                    i{
+                        transition: opacity 0.5s ease;
+                        color: black;
+                    }
+                }
+                .cv-container{
+                    border: 2px solid black;
+                    &:hover{
+                        animation: shake 0.5s;
+                    }
+                    a{
+                        color: black;
+                    }
+                    
+                }
+            }
+        }
     }
 }

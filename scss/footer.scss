@@ -1,1 +1,69 @@
-
+footer{
+    display: flex;
+    max-width: 1600px;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: sticky;
+    top: 100vh;
+    margin: 170px auto 0;
+    .container-section{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 24px;
+        margin: auto;
+        .cv{
+            color: white;
+            max-width: 35%;
+        }
+        .page{
+            display: flex;
+            flex-direction: column;
+            a{
+                color: white;
+            }
+        }
+        .reseaux{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            a{
+                .container-github{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.5rem ;
+                    background: gray;
+                    border: 2px solid white;
+                    padding: 5px 15px;
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    p{
+                        color: white;
+                    }
+                }
+                .container-linkedin{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.5rem ;
+                    background: gray;
+                    border: 2px solid white;
+                    padding: 5px 15px;
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    p{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    
+}
