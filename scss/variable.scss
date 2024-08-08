@@ -2,7 +2,7 @@
 $main-color: #754ef9;
 $blanc: #fff;
 $noir: #000;
-$background: #000;
+$primary: #000;
 $ecriture: #fff;
 
 $js : #f7df1e;
@@ -11,3 +11,21 @@ $css : #1572b7;
 $elementor: #59407f;
 $csharp: #662079;
 $php : #8c9bd6;
+
+
+// Marge
+
+$marge: 1em;
+$marge-xs: 1rem;
+
+// Width
+
+$container-width: 1140px;
+
+// Responsive
+
+$only-smartphone: 767px;
+$small-tablet: 768px;
+$large-tablet: 992px;
+$desktop: 1200px;
+$large-desktop: 1600px;

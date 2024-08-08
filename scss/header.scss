@@ -20,130 +20,168 @@
 }
 
 
-header{
+.navbar{
+    position: fixed;
+    padding: 20px;
     display: flex;
     align-items: center;
-    width: 100%;
-    margin: auto;
-    padding: 12px 7rem;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    transition: all 0.3s cubic-bezier(0.39, 0.575, 0, 1.005);
+    width: 100%;
+    min-height: 100px;
+    box-sizing: border-box;
     &.background-transparent{
         background-color: rgba(255, 255, 255, 0.302) ;
         transition: all 0.3s cubic-bezier(0.39, 0.575, 0, 1.005);
         backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         border-bottom: 2px solid white;
     }
-    .logo{
-        scroll-behavior: smooth;
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        transition: all 0.3s cubic-bezier(0.39,0.575,0,1.005);
-        font-weight: 400;
-        color: $ecriture;
-
-        &:hover{
-            animation: shake 0.5s;
-
-
-        }
-        a{
-            font-size: 35px;
-            color: $ecriture;
+    a{
+        color: white;
+        &.logo{
+            font-size: 2em;
             font-weight: 900;
-
-        }
-    }
-    nav{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        a{
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.39,0.575,0,1.005);
             color: $ecriture;
-            font-size: 17px;
-            font-weight: 500;
-            &:hover{
-                animation: colorchange 0.2s linear forwards;
-            }
-
-        }
-    }
-    .chargement{
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        .change-theme{
-            cursor: pointer;
-            width: 32px;
-            height: 32px;
-            i{
-                transition: opacity 0.5s ease;
-            }
-        }
-        .cv-container{
-            border: 2px solid $blanc;
-            border-radius: 4px;
-            padding: 5px 15px;
+            cursor: crosshair !important;
             &:hover{
                 animation: shake 0.5s;
             }
-            a{
-                color: $ecriture;
-            }
-            
         }
     }
-}
+    .nav-links{
+        display: flex;
+        align-items: center;
+        
+        ul{
+            display: flex;
+            gap: 20px;
+            
+            li{
+                font-size: 17px;
+                &.active{
+                    a{
+                        color: $main-color;
+                    }
+                }
+                &:hover{
+                    a{
+                        animation: colorchange 0.5s;
+                    }
+                }
+                    
+            }  
+        }
+        .chargement{
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .change-theme{
+                cursor: pointer;
+                position: relative;
+                width: 30px;
+                height: 30px;
 
-.hide {
-    opacity: 0;
-}
-  
-.show {
-    opacity: 1;
-}
-
-body{
-    &.light-theme{
-        header{           
-            &.background-transparent{
-                background-color: rgba(0, 0, 0, 0.302) ;
-                border-bottom: 2px solid black;
+                i{
+                    position: absolute;
+                    top: 25%;
+                    left: 25%;
+                }
             }
-            .logo{  
+            .cv-container{
+                border: 2px solid $blanc;
+                border-radius: 4px;
+                padding: 5px 15px;
                 &:hover{
                     animation: shake 0.5s;
                 }
                 a{
-                    color: black;
+                    color: $ecriture;
                 }
+                
             }
-            nav{
-                a{
-                    color: black;
-                    &:hover{
-                        animation: colorchange 0.2s linear forwards;
-                    }
-                }
+        }
+
+    }
+    .menu-hamburger{
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        display: none;
+    }
+}
+
+
+
+//responsive
+
+@media screen and (max-width: $large-tablet){
+    .navbar{
+        padding: 0 !important;
+        .logo{
+            position: absolute;
+            top: 25px;
+            left: 30px;
+            z-index: 1000;
+        }
+        .nav-links{
+            position: absolute;
+            flex-direction: column;
+            background-color: rgb(255, 255, 255, 0.299);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -100%;
+            transition: all 0.5s;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             .chargement{
-                .change-theme{
-                    cursor: pointer;
-                    i{
-                        transition: opacity 0.5s ease;
-                        color: black;
-                    }
+                margin-top: 20px;
+                gap: 20px;
+            }
+            &.mobile-menu{
+                margin-left: 0;
+            }
+        }
+        .menu-hamburger{
+            display: block !important;
+        }
+    }
+}
+
+
+body{
+    &.light-theme{
+        .navbar{
+            &.background-transparent{
+                background-color: rgba(0, 0, 0, 0.426) ;
+                border-bottom: 2px solid black;
+            }
+            a{
+                color: $noir;
+            }
+            .nav-links{
+                i{
+                    color: $noir !important;
                 }
                 .cv-container{
                     border: 2px solid black;
+                    border-radius: 4px;
+                    padding: 5px 15px;
                     &:hover{
                         animation: shake 0.5s;
                     }
@@ -153,6 +191,20 @@ body{
                     
                 }
             }
+            svg{
+                line{
+                    stroke: black;
+                }
+                
+            }
         }
     }
+}
+
+
+.background{
+    background-color: transparent !important;
+    transition: none !important;
+    backdrop-filter: none !important; 
+    border-bottom: none !important;
 }

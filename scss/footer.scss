@@ -34,6 +34,10 @@ footer{
                 padding: 0.5rem 1rem;
                 border: 1px solid white;
                 border-radius: 5px;
+                &:hover{
+                    background: white;
+                    color: black;
+                }
             }
         }
         .page{
@@ -55,32 +59,54 @@ footer{
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+                    justify-content: center;
                     gap: 0.5rem ;
-                    background: gray;
+                    background: rgb(0, 0, 0);
                     border: 2px solid white;
+                    border-radius: 5px;
                     padding: 5px 15px;
-                    img{
-                        width: 30px;
-                        height: 30px;
+                    i{
+
+                        color: white;
                     }
                     p{
                         color: white;
+                    }
+                    &:hover{
+                        background: white;
+                        i{
+                            color: black;
+                        }
+                        p{
+                            color: black;
+                        }
                     }
                 }
                 .container-linkedin{
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+                    justify-content: center;
                     gap: 0.5rem ;
-                    background: gray;
+                    background: rgb(0, 0, 0);
                     border: 2px solid white;
+                    border-radius: 5px;
                     padding: 5px 15px;
-                    img{
-                        width: 30px;
-                        height: 30px;
+                    i{
+
+                        color: white;
                     }
                     p{
                         color: white;
+                    }
+                    &:hover{
+                        background: white;
+                        i{
+                            color: black;
+                        }
+                        p{
+                            color: black;
+                        }
                     }
                 }
             }
@@ -95,48 +121,25 @@ footer{
 body{
     &.light-theme{
         footer{
-            display: flex;
-            max-width: 1600px;
-            width: 90%;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-            position: sticky;
-            top: 100vh;
-            margin: 170px auto 0;
             hr{
-                width: 100%;
+
                 border: 1px solid black;
-                border-radius: 100px;
             }
             .container-section{
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                gap: 24px;
-                margin: auto;
-                padding: 2rem;
+
                 .cv{
                     color: black;
-                    max-width: 35%;
-                    h2{
-                        padding: 0 0 1rem 0;
-                    }
-                    p{
-                        padding: 0 0 1rem 0;
-                    }
                     a{
                         color: black;
-                        padding: 0.5rem 1rem;
+
                         border: 1px solid black;
-                        border-radius: 5px;
+
                     }
                 }
                 .page{
-                    display: flex;
-                    flex-direction: column;
+
                     h2{
-                        padding: 0 0 1rem 0;
+
                         color: black;
                     }
                     a{
@@ -144,41 +147,42 @@ body{
                     }
                 }
                 .reseaux{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
+
                     a{
                         .container-github{
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            gap: 0.5rem ;
-                            background: gray;
-                            border: 2px solid white;
-                            padding: 5px 15px;
-                            img{
-                                width: 30px;
-                                height: 30px;
 
-                            }
+                            background: rgb(0, 0, 0);
+                            border: 2px solid rgb(255, 255, 255);
+
+
                             p{
-                                color: white;
+                                color: rgb(255, 255, 255);
+                            }
+                            &:hover{
+                                background: white;
+                                border: 2px solid black;
+
+                                p{
+                                    color: black;
+                                }
                             }
                         }
                         .container-linkedin{
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            gap: 0.5rem ;
-                            background: gray;
+
+                            background: rgb(0, 0, 0);
                             border: 2px solid white;
-                            padding: 5px 15px;
-                            img{
-                                width: 30px;
-                                height: 30px;
-                            }
+
+
                             p{
                                 color: white;
+                            }
+                            &:hover{
+                                background: white;
+                                border: 2px solid black;
+
+                                p{
+                                    color: black;
+                                }
                             }
                         }
                     }

@@ -1,47 +1,57 @@
-$(document).ready(function() {
-    $(window).on('scroll', function() {
-      // Récupère la hauteur de défilement
-      var scrollTop = $(window).scrollTop();
+/* Import jQuery */
+jQuery(document).ready(function () {
+  var body = jQuery(document.body);
+  var button = jQuery("svg");
+  var line = jQuery("line");
 
-      // Définir la hauteur de défilement après laquelle la classe est ajoutée
-      var triggerHeight = 100; // Changez cette valeur pour ajuster le point de déclenchement
-
-      if (scrollTop > triggerHeight) {
-        $('.header').addClass('background-transparent');
-      } else {
-        $('.header').removeClass('background-transparent');
+  button.click(function () {
+      if (jQuery(document.body).hasClass("menu-open")) {
+          body.removeClass("menu-open");
+          return;
       }
-    });
-
-
-
-    $('.change-theme').on('click', function() {
-        var $moonIcon = $('.bx-moon');
-        var $sunIcon = $('.bx-sun');
-        var $body = $('body');
-    
-        // Si le SVG de la lune est visible, on le cache et montre le soleil
-        if ($moonIcon.is(':visible')) {
-          $moonIcon.addClass('hide').removeClass('show');
-          $sunIcon.addClass('show').removeClass('hide');
-          $body.addClass('light-theme');
-
-          
-          // Délai pour assurer que l'animation est jouée avant le changement de display
-          setTimeout(function() {
-            $moonIcon.hide();
-            $sunIcon.show();
-          }, 500); // Doit correspondre au temps de transition
-        } else {
-          // Si le SVG du soleil est visible, on le cache et montre la lune
-          $sunIcon.addClass('hide').removeClass('show');
-          $moonIcon.addClass('show').removeClass('hide');
-            $body.removeClass('light-theme');
-          
-          setTimeout(function() {
-            $sunIcon.hide();
-            $moonIcon.show();
-          }, 500);
-        }
-      });
+      body.addClass("menu-open");
   });
+});
+
+const menuHamburger = document.querySelector(".menu-hamburger")
+const navLinks = document.querySelector(".nav-links")
+
+menuHamburger.addEventListener('click',()=>{
+navLinks.classList.toggle('mobile-menu')
+})
+
+
+
+$(document).ready(function() {
+  $(window).on('scroll', function() {
+    // Récupère la hauteur de défilement
+    var scrollTop = $(window).scrollTop();
+
+    // Définir la hauteur de défilement après laquelle la classe est ajoutée
+    var triggerHeight = 100; // Changez cette valeur pour ajuster le point de déclenchement
+
+    if (scrollTop > triggerHeight) {
+      $('.navbar').addClass('background-transparent');
+    } else {
+      $('.navbar').removeClass('background-transparent');
+    }
+  });
+
+
+
+  $('.change-theme').on('click', function() {
+      var $moonIcon = $('.bx-moon');
+      var $sunIcon = $('.bx-sun');
+      var $body = $('body');
+  
+      // Basculer les classes d'affichage et d'animation
+      $moonIcon.toggleClass('hide show');
+      $sunIcon.toggleClass('hide show');
+      $body.toggleClass('light-theme');
+  });
+});
+
+
+$('.menu-hamburger').on('click', function() {
+  $(".navbar").toggleClass('background');
+});

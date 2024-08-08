@@ -18,35 +18,38 @@
     <title>Thomas Lejeune | Portfolio</title>
 </head>
 <body>
-    
-    <header class="header">
-        <div class="logo">
-            <a href="index.html">IXELTAL.</a>
-        </div>
-        <nav>
-            <a href="/index.html">Accueil</a>
-            <a href="/projets.html">Projets</a>
-            <a href="">...</a>
-            <a href="">...</a>
-        </nav>
-        <div class="chargement">
-            <div class="change-theme">
-                <i class='bx bx-moon'></i>
-                <i class='bx bx-sun' style="display: none;"></i>
+    <nav class="navbar">
+        <a href="#" class="logo">IXELTAL.</a>
+        <div class="nav-links">
+            <ul >
+                <li class="active"><a href="#">Accueil</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+            </ul>
+            <div class="chargement">
+                <div class="change-theme">
+                    <i class='bx bx-moon show'></i>
+                    <i class='bx bx-sun hide'></i>
+                </div>
+                <div class="cv-container"><a href="#">Mon CV</a></div>
             </div>
-            <div class="cv-container"><a href="#">Mon CV</a></div>
-
         </div>
-    </header>
+        <svg class="vbp-header-menu-button__svg menu-hamburger">
+            <line x1="0" y1="50%" x2="100%" y2="50%" class="top" shape-rendering="crispEdges" />
+            <line x1="0" y1="50%" x2="100%" y2="50%" class="middle" shape-rendering="crispEdges" />
+            <line x1="0" y1="50%" x2="100%" y2="50%" class="bottom" shape-rendering="crispEdges" />
+        </svg>
+    </nav>
 
     <section class="presentation">
         <div class="left-presentation">
             <p class="name-description">Mon nom est -</p>
             <div class="container-titre">
-                <h1 class="name">Thomas Lejeune</h1> <p class="point">.</p>
+                <h1 class="name">Thomas Lejeune</h1>
             </div>
-            
-            <p>Je suis un développeur web fullstack passionné par la programmation et le développement web. Je suis actuellement en formation chez Ixeltal pour devenir un développeur web fullstack.</p>
+            <p>J'ai actuellement 20 ans et je suis un développeur front-end junior basé en France dans le Centre-Val de Loire. J'apprends par moi-même depuis 2020 avec pour objectif de devenir développeur full-stack. Je viens de terminer mon alternance en BTS SIO SLAM chez Welabz. Je cherche des opportunités afin d'améliorer mes compétences.
+            </p>
             <div class="container-button">
                 <a class="button-link" href="#">Resumé</a>
                 <a class="button-link" href="#">Mon cv</a>
@@ -59,6 +62,8 @@
         <div class="right-presentation">
             <img src="/assets/1679337364074.png" alt="">
         </div>
+        <div class="tache"></div>
+        <div class="tache" id="one"></div>
     </section>
 
     <section class="experience">
@@ -66,14 +71,27 @@
         <div class="container-experiences">
             <div class="single-experience">
                 <div class="container-image">
-                    <img src="" alt="">
+                    <img src="/assets/OIP-removebg-preview.png" alt="">
                 </div>
                 <div class="text-exp">
-                    <h3>Lycée Jean ZAY - École</h3>
-                    <p>Mention complémentaire Service Numérique aux Organisations</p>
+                    <h3>Welabz - Alternance</h3>
+                    <p>BTS SIO SLAM</p>
                 </div>
                 <div class="date-exp">
-                    <p>2021 - 2022</p>
+                    <p>2023 - 2024</p>
+                </div>
+            </div>
+
+            <div class="single-experience">
+                <div class="container-image">
+                    <img src="/assets/zec_logo_HD_resize.png.webp" alt="">
+                </div>
+                <div class="text-exp">
+                    <h3>ZE-Company - Alternance</h3>
+                    <p>BTS SIO SLAM</p>
+                </div>
+                <div class="date-exp">
+                    <p>2022 - 2023</p>
                 </div>
             </div>
             <div class="single-experience">
@@ -90,26 +108,14 @@
             </div>
             <div class="single-experience">
                 <div class="container-image">
-                    <img src="/assets/zec_logo_HD_resize.png.webp" alt="">
+                    <img src="/assets/logo-jeanzay.png" alt="">
                 </div>
                 <div class="text-exp">
-                    <h3>ZE-Company - Alternance</h3>
-                    <p>BTS SIO SLAM</p>
+                    <h3>Lycée Jean ZAY - École</h3>
+                    <p>Mention complémentaire Service Numérique aux Organisations</p>
                 </div>
                 <div class="date-exp">
-                    <p>2022 - 2023</p>
-                </div>
-            </div>
-            <div class="single-experience">
-                <div class="container-image">
-                    <img src="" alt="">
-                </div>
-                <div class="text-exp">
-                    <h3>Welabz - Alternance</h3>
-                    <p>BTS SIO SLAM</p>
-                </div>
-                <div class="date-exp">
-                    <p>2023 - 2024</p>
+                    <p>2021 - 2022</p>
                 </div>
             </div>
         </div>
@@ -139,53 +145,52 @@
                     </div>
                 </div>
             </div>          
-                <div class="container-app">
-                    <h3>Librairies & frameworks</h3>
-                    <div class="container-inter-langapp">
-                        <div class="single-lang-app">
-                            <i class="devicon-jquery-plain"></i>
-                            <p>JQUERY</p>
-                        </div>
-                        <div class="single-lang-app">
-                            <i class="devicon-sass-original"></i>
-                            <p>SASS</p>
-                        </div>
-                        <div class="single-lang-app">
-                            <i class="devicon-react-original"></i>
-                            <p>REACT</p>
-                        </div>
-                        <div class="single-lang-app">
-                            <i class="devicon-nodejs-plain"></i>
-                            <p>NODE.JS</p>
-                        </div>
-                        <div class="single-lang-app">
-                            <i class="devicon-discordjs-plain"></i>
-                            <p>DISCORD.JS</p>
-                        </div>  
+            <div class="container-app">
+                <h3>Librairies & frameworks</h3>
+                <div class="container-inter-langapp">
+                    <div class="single-lang-app">
+                        <i class="devicon-jquery-plain"></i>
+                        <p>JQUERY</p>
                     </div>
-                </div>
-    
-                <div class="container-app">
-                    <h3>Applications</h3>
-                    <div class="container-inter-langapp">
-                        <div class="single-lang-app">
-                            <i class="devicon-vscode-plain"></i>
-                            <p>VS CODE</p>
-                        </div>
-                        <div class="single-lang-app">
-                            <i class="devicon-figma-plain"></i>
-                            <p>FIGMA</p>
-                        </div>
-                        <div class="single-lang-app">
-                            <i class="devicon-wordpress-plain"></i>
-                            <p>WORDPRESS</p>
-                        </div>
-                        <div class="single-lang-app">
-                            <i class="devicon-blender-original"></i>
-                            <p>BLENDER</p>
-                        </div> 
+                    <div class="single-lang-app">
+                        <i class="devicon-sass-original"></i>
+                        <p>SASS</p>
                     </div>
+                    <div class="single-lang-app">
+                        <i class="devicon-react-original"></i>
+                        <p>REACT</p>
+                    </div>
+                    <div class="single-lang-app">
+                        <i class="devicon-nodejs-plain"></i>
+                        <p>NODE.JS</p>
+                    </div>
+                    <div class="single-lang-app">
+                        <i class="devicon-discordjs-plain"></i>
+                        <p>DISCORD.JS</p>
+                    </div>  
                 </div>
+            </div>
+            <div class="container-app">
+                <h3>Applications</h3>
+                <div class="container-inter-langapp">
+                    <div class="single-lang-app">
+                        <i class="devicon-vscode-plain"></i>
+                        <p>VS CODE</p>
+                    </div>
+                    <div class="single-lang-app">
+                        <i class="devicon-figma-plain"></i>
+                        <p>FIGMA</p>
+                    </div>
+                    <div class="single-lang-app">
+                        <i class="devicon-wordpress-plain"></i>
+                        <p>WORDPRESS</p>
+                    </div>
+                    <div class="single-lang-app">
+                        <i class="devicon-blender-original"></i>
+                        <p>BLENDER</p>
+                    </div> 
+                </div>
+            </div>   
         </div>
     </section>
     
@@ -206,34 +211,33 @@
                 </div>
             </a>
             <a href="#" class="single-projet">
-                <div class="container-image" id="natureetmoi">
+                <div class="container-image" id="overlay-rl">
                 </div>
                 <div class="text-project">
-                    <h3>Nature&Moi</h3>
-                    <p>Nature&Moi est un site e-commerce pour un client </p>
+                    <h3>Overlay Rocket League</h3>
+                    <p>Cet Overlay permet de personnaliser des matchs sur Rocket League,</p>
                 </div>
                 <div class="container-langapp-use">
-                    <p>Wordpress</p>
-                    <p>Divi</p>
-                    <p>Maquette</p>
+                    <p>TypeScript</p>
+                    <p>Css</p>
+                    <p>HTML</p>
                 </div>
             </a>
             <a href="#" class="single-projet">
                 <div class="container-image" id="natureetmoi">
                 </div>
                 <div class="text-project">
-                    <h3>Nature&Moi</h3>
-                    <p>Nature&Moi est un site e-commerce pour un client </p>
+                    <h3>Application TODO List</h3>
+                    <p>Une application simple de TODOLIST avec une petite base de donnée</p>
                 </div>
                 <div class="container-langapp-use">
-                    <p>Wordpress</p>
-                    <p>Divi</p>
-                    <p>Maquette</p>
+                    <p>REACT</p>
+                    <p>CSS</p>
+                    <p>MongoDB</p>
                 </div>
             </a>
         </div>
-        <div class="container-button-other-projet"><a href="#">Voir mes autres projets...</a></div>
-        
+        <div class="container-button-other-projet"><a href="/projets">Voir mes autres projets...</a></div>    
     </section>
 
     <footer>
@@ -252,12 +256,12 @@
                 <a href="#">...</a>
             </div>
             <div class="reseaux">
-                <a href=""><div class="container-github">
-                    <img src="/assets/linkedin-svgrepo-com (3).svg" alt="">
+                <a href=""><div class="container-linkedin">
+                    <i class="devicon-linkedin-plain"></i>
                     <p>LINKEDIN</p>
                 </div></a>
-                <a href=""><div class="container-linkedin">
-                    <img src="/assets/github-svgrepo-com (8).svg" alt="">
+                <a href=""><div class="container-github">
+                    <i class="devicon-github-original"></i>
                     <p>GITHUB</p>
                 </div></a>
             </div>
