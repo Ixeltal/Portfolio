@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile_sass_css":"sass --no-source-map --watch ./scss/index.scss ./css/style.css"
+    "compile_sass_css":"sass --no-source-map --watch ./scss/index.scss style.css"
   },
   "author": "Ixeltal",
   "license": "ISC",
