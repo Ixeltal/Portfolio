@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <script defer src="/js/jquery.js"></script>
     <script defer src="/js/script.js"></script>
 
@@ -19,25 +19,30 @@
 </head>
 <body>
     
-    <header class="header">
-        <div class="logo">
-            <a href="index.html">IXELTAL.</a>
-        </div>
-        <nav>
-            <a href="/index.html">Accueil</a>
-            <a href="/projets.html">Projets</a>
-            <a href="">...</a>
-            <a href="">...</a>
-        </nav>
-        <div class="chargement">
-            <div class="change-theme">
-                <i class='bx bx-moon'></i>
-                <i class='bx bx-sun' style="display: none;"></i>
+    <nav class="navbar">
+        <a href="/index.html" class="logo">IXELTAL.</a>
+        <div class="nav-links">
+            <ul >
+                <li class="active"><a href="/index.html">Accueil</a></li>
+                <li><a href="/projets.html">Projets</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">...</a></li>
+            </ul>
+            <div class="chargement">
+                <div class="cv-container"><a href="#">Mon CV</a></div>
+                <div class="change-theme">
+                    <i class='bx bx-moon show'></i>
+                    <i class='bx bx-sun hide'></i>
+                </div>
             </div>
-            <div class="cv-container"><a href="#">Mon CV</a></div>
-
         </div>
-    </header>
+        <svg class="vbp-header-menu-button__svg menu-hamburger">
+            <line x1="0" y1="50%" x2="100%" y2="50%" class="top" shape-rendering="crispEdges" />
+            <line x1="0" y1="50%" x2="100%" y2="50%" class="middle" shape-rendering="crispEdges" />
+            <line x1="0" y1="50%" x2="100%" y2="50%" class="bottom" shape-rendering="crispEdges" />
+        </svg>
+    </nav>
+
 
     <section class="projets">
         <h2>Mes projets</h2>
