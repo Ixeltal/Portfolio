@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="ressources/crocodile-logo.ico">
+    <link rel="shortcut icon" href="ressources/crocodile-logo.ico" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <title>Projets - LEJEUNE Thomas</title>
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <a class="logo" href="index.html"><img src="ressources/crocodile-logo.png" alt=""></a>
+        </div>
+        
+        <nav class="nav-links">
+            <div class="left-nav">
+            
+                <ul>
+                    <li><a href="project.html">MES PROJETS</a></li>
+                    <li><a href="mastack.html">MA STACK</a></li>
+                </ul>
+            </div>
+            <div class="right-nav">
+                <a class="button-blue" href="mailto:thomaslejeune079@gmail.com">ME CONTACTER</a>
+            </div>
+        </nav>
+        <div class="menu-hamburger">
+        <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+        <path
+        class="line top"
+        d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+        <path
+        class="line middle"
+        d="m 30,50 h 40" />
+        <path
+        class="line bottom"
+        d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+        </svg>
+        </div>
+
+    </header>
+
+    <section class="presentation">
+        <div class="present-left">
+            <h1>Mes Projets</h1>
+            <p>
+                Découvrez une sélection de mes projets réalisés en tant que développeur web junior.
+                Chaque projet reflète mon engagement envers la qualité, l'innovation et la satisfaction client.
+            </p>
+
+            <div class="social-wrapper">
+                <div class="link-social-media">
+                    <a class="icon" href="https://www.linkedin.com/in/thomas-lejeune-4b8725232/" target="_blank">
+                        <i class="devicon-linkedin-plain"></i>
+                    </a>
+                    <a class="icon" href="https://github.com/thomaslejeune" target="_blank">
+                        <i class="devicon-github-original"></i>
+                    </a>
+                </div>
+
+                <div class="disponible">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+        </div>
+
+        <div class="present-right">
+            <img src="ressources/project.png" alt="Illustration développeur web">
+        </div>
+    </section>
+
+    <section class="filters">
+    <button class="filter-btn active" data-filter="all">
+        Tout (<span class="count"></span>)
+    </button>
+    <button class="filter-btn" data-filter="extension">
+        Extension (<span class="count"></span>)
+    </button>
+    <button class="filter-btn" data-filter="sante">
+        Santé / Bien-être (<span class="count"></span>)
+    </button>
+    <button class="filter-btn" data-filter="jeu">
+        Jeu (<span class="count"></span>)
+    </button>
+    </section>
+
+
+    <section class="projects">
+    <div class="projects-container">
+
+        <a href="natureetmoi.html" class="project-link" data-category="sante">
+        <article class="project-card">
+            <div class="project-img">
+                <img src="ressources/nature&moi.png" alt="">
+            </div>
+            <h3>Nature & Moi</h3>
+            <p>Un projet de boutique en ligne axé sur la nature et les produits écologiques.</p>
+            <div class="tags">
+                <span>Wordpress</span>
+                <span>Figma</span>
+                <span>Divi</span>
+            </div>
+        </article>
+        </a>
+
+        <a href="ixotodolist.html" class="project-link" data-category="extension">
+        <article class="project-card">
+            <div class="project-img">
+                <img src="ressources/Ixo_ToDoList.png" alt="">
+            </div>
+            <h3>Ixo_ToDoList</h3>
+            <p>Un simple projet de ToDo List sous forme d'extension Chrome.</p>
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+            </div>
+        </article>
+        </a>
+
+        <a href="yugiabattle.html" class="project-link" data-category="jeu">
+                <article class="project-card">
+                    <div class="project-img">
+                        <img src="ressources/YugiaBattle_logo.png" alt="Yugia Battle">
+                    </div>
+                    <h3>Yugia Battle</h3>
+                    <p>Yugia Battle est conçu pour gérer une communauté autour du jeu Yu-Gi-Oh.</p>
+                    <div class="tags">
+                        <span>Discord.js</span>
+                    </div>
+                </article>
+            </a>
+
+
+
+    </div>
+    </section>
+
+
+    <section>
+        <div class="contact-section">
+            <h2>Prêt à collaborer ?</h2>
+            <p>Contactez-moi pour discuter de votre projet ou simplement dire bonjour !</p>
+            <a class="button-white" href="mailto:thomaslejeune079@gmail.com">ME CONTACTER</a>
+        </div>
+    </section>
+
+
+
+
+
+    <footer>
+        <div class="right-footer">
+            <a class="icon" href="https://www.linkedin.com/in/thomas-lejeune1/" target="_blank">
+                <i class="devicon-linkedin-plain"></i>
+            </a>
+            <a class="icon" href="https://github.com/Ixeltal" target="_blank">
+                <i class="devicon-github-original"></i>
+            </a>
+        </div>
+        <div class="left-footer">
+            <p>&copy; 2025 Thomas LEJEUNE. Tous droits réservés.</p>
+            <a href="mentionlegale.html">Mentions légales</a>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
