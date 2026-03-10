@@ -748,6 +748,13 @@ footer .icon i {
 }
 
 
+
+.mypresentation-left img{
+  width: 350px;
+  height: auto;
+}
+
+
 .mypresentation-right p{
   margin-bottom: 2rem;
 }
@@ -874,3 +881,5 @@ footer .icon i {
   justify-content: center;
   background-color: #F2B705;
 }
+
+
