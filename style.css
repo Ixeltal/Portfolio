@@ -539,7 +539,7 @@ footer .icon i {
   border-radius: 16px;
   padding: 16px;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  height: 400px;
+  min-height: 400px;
 }
 
 .project-card img {
