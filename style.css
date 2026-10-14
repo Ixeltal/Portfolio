@@ -862,7 +862,7 @@ footer .icon i {
   background-color: #C62828;
 }
 .blue{
-    width: 5rem;
+  width: 5rem;
   height: 5rem;
   border-radius: 100%;
   border: 1px solid rgb(255, 255, 255);
@@ -872,7 +872,8 @@ footer .icon i {
   background-color: #1E86B8;
 }
 
-.yellow{  width: 5rem;
+.yellow{  
+  width: 5rem;
   height: 5rem;
   border-radius: 100%;
   border: 1px solid rgb(255, 255, 255);
@@ -883,3 +884,36 @@ footer .icon i {
 }
 
 
+.gris{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #29343b;
+}
+
+.rouge{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d34233;
+}
+
+
+.logo-accompagnement{
+  width: 300px !important;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+video{
+  width: 100%;
+  max-width: 600px;
+}
